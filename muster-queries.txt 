@@ -1,0 +1,54 @@
+-- USER: Create, Read, Update, Delete
+
+-- Nutzer anlegen
+INSERT INTO User (firstName, lastName, email, password)
+VALUES ('Maya', 'Schrein', 'Maya.schrein54@web.de', '56743254678jhgfdjmh');
+
+-- Einzelnen Nutzer abrufen
+SELECT * FROM User WHERE email = 'Maya.schrein54@web.de';
+
+-- Alle Nutzer abrufen (für Nutzerliste)
+SELECT email FROM User;
+
+-- Nutzer bearbeiten (wird über originale E-Mail angesprochen)
+UPDATE User
+SET firstName = 'Maya', lastName = 'Schreiner', email = 'maya.schreiner@web.de', password = 'neuPasswort123'
+WHERE email = 'Maya.schrein54@web.de';
+
+-- Nutzer löschen
+DELETE FROM User WHERE email = 'maya.schreiner@web.de';
+
+
+-- PET: Create, Read, Delete
+
+-- Haustier hinzufügen
+INSERT INTO Pet (name, kind, email)
+VALUES ('Mascha', 'Katze', 'Maya.schrein54@web.de');
+
+-- Alle Haustiere eines Nutzers anzeigen
+SELECT * FROM Pet WHERE email = 'Maya.schrein54@web.de';
+
+-- Haustier löschen
+DELETE FROM Pet WHERE name = 'Mascha' AND email = 'Maya.schrein54@web.de';
+
+
+-- Fehlerfälle (für Bonus)
+
+-- Nutzer löschen, der nicht existiert
+DELETE FROM User WHERE email = 'nicht@da.de';
+-- Erwartung: 0 betroffene Zeilen
+
+-- Nutzer bearbeiten, der nicht existiert
+UPDATE User
+SET firstName = 'Unbekannt', lastName = 'Niemand'
+WHERE email = 'keiner@web.de';
+-- Erwartung: 0 betroffene Zeilen
+
+-- Haustier mit nicht existierender E-Mail hinzufügen
+INSERT INTO Pet (name, kind, email)
+VALUES ('Phantom', 'Katze', 'ghost@web.de');
+-- Erwartung: Fremdschlüsselverletzung (Fehler)
+
+-- Haustier löschen, das nicht existiert
+DELETE FROM Pet WHERE name = 'NichtDa' AND email = 'Maya.schrein54@web.de';
+-- Erwartung: 0 betroffene Zeilen

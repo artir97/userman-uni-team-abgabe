@@ -1,0 +1,16 @@
+{
+  "name": "datenbank-server-beispiel",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Mark Maron",
+  "main": "client.js",
+  "dependencies": {
+    "@types/express": "^5.0.1",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.15.17"
+  }
+}

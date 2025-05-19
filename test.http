@@ -1,0 +1,52 @@
+### Get all User
+GET /user HTTP/2
+Host: localhost:8080
+
+### Get a single User
+GET /user/mark.maron@web.de HTTP/2
+Host: localhost:8080
+
+### Delete a User
+DELETE /user/mark.maron@web.de HTTP/2
+Host: localhost:8080
+
+### Create a User
+POST /user HTTP/2
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "firstName": "Hans",
+  "lastName": "Müller",
+  "password": "123",
+  "email": "Hans.Müller@web.de"
+}
+
+### Update a User
+PUT /user/markmaron345@web.de HTTP/2
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "firstName": "Mark",
+  "lastName": "Maron",
+  "password": "123456",
+  "email": "test.test@web.de"
+}
+###
+GET /user/markmaron777@web.de/pet HTTP/2
+Host: localhost:8080
+###
+POST /user/markmaron777@web.de/pet HTTP/2
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "name": "Paul",
+  "kind": "Hund"
+}
+###
+DELETE /user/markmaron777@web.de/pet/Paul HTTP/2
+Host: localhost:8080
+
+
