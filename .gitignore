@@ -1,0 +1,63 @@
+# macOS-Systemdateien
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Spotlight-Verschlüsselungen
+.Spotlight-V100
+.Trashes
+
+# Icon-Dateien im Ordner
+Icon?
+
+# ._* Dateien (Ressourcen-Forks)
+._*
+
+# Thumbnails
+ehthumbs.db
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# JetBrains IDEs (z. B. PhpStorm, WebStorm, IntelliJ)
+.idea/
+
+# Node.js / npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.pnpm-debug.log*
+
+# macOS Terminal-Dateien
+*.swp
+*.swo
+
+# Git-Backup-Dateien
+*.orig
+
+# Umgebungsvariablen
+.env
+.env.local
+.env.*.local
+
+# Logdateien
+*.log
+
+# Build-Verzeichnisse (je nach Projekt anpassen)
+dist/
+build/
+out/
+
+# Python Bytecode (falls du Python nutzt)
+__pycache__/
+*.py[cod]
+
+# Homebrew Caches (selten, aber möglich)
+*.brew
+
+# Andere mögliche Cache- oder Artefaktverzeichnisse
+.cache/
+.tmp/
